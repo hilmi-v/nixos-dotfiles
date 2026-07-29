@@ -1,11 +1,14 @@
-
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -16,10 +19,10 @@
 
   # Enable the X11 windowing system. KDE
   services.xserver = {
-	enable = true;
-	autoRepeatDelay = 200;
-	autoRepeatInterval = 35;
-	};
+    enable = true;
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 35;
+  };
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
@@ -38,43 +41,38 @@
     MOZ_ENABLE_WAYLAND = "0";
     MOZ_USE_XINPUT = "1";
   };
-  programs.firefox.preferences = {
-  "widget.use-xdg-desktop-portal.file-picker" = 1;
-};
-programs.firefox.nativeMessagingHosts.packages = [
-  pkgs.kdePackages.plasma-browser-integration
-];
  
 
-# Define a user account. Don't forget to set a password with ‘passwd’.
-   users.users.hilmi = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-     packages = with pkgs; [
-       tree
-     ];
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.hilmi = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    packages = with pkgs; [
+      tree
+    ];
   };
 
-
-   environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
     kitty
-    peazip 
+    peazip
     fastfetch
-    kdePackages.plasma-browser-integration
     nixfmt
-   ];
+  ];
 
-    programs.steam.enable = true;
+  programs.steam.enable = true;
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nix.settings.auto-optimise-store = true;
   nix.gc = {
-  automatic = true;
-  dates = "weekly";
-  options = "--delete-older-than 30d";
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
   };
   zramSwap = {
     enable = true;
