@@ -50,7 +50,7 @@ in
     pkgs.libreoffice-qt
     pkgs.vscode
     pkgs.darkly
-    pkgs.prismlauncher
+
   ];
 
   # Konfigurasi Spicetify
