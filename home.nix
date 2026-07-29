@@ -37,6 +37,7 @@ in
 		pkgs.mpv
 		pkgs.libreoffice-qt
 		pkgs.vscode
+		pkgs.darkly
 	];
 
 	# Konfigurasi Spicetify
