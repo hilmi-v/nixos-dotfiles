@@ -22,8 +22,11 @@ in
 
   programs.git = {
     enable = true;
-    userName = "hilmi-v";
-    userEmail = "alfalahhilmi@gmail.com";
+    settings.user = {
+      name = "hilmi-v";
+      email = "alfalahhilmi@gmail.com";
+    };
+
   };
 
   programs.bash = {
@@ -47,6 +50,7 @@ in
     pkgs.libreoffice-qt
     pkgs.vscode
     pkgs.darkly
+    pkgs.atlauncher
   ];
 
   # Konfigurasi Spicetify
