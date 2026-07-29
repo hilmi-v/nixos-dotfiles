@@ -27,6 +27,8 @@ in
 			testaja = "just nix btw";
 		};
 	};
+home.file.".zen/native-messaging-hosts/org.kde.plasma.browser_integration.json".source = 
+  "${pkgs.kdePackages.plasma-browser-integration}/lib/mozilla/native-messaging-hosts/org.kde.plasma.browser_integration.json";
 
 	home.packages = [
 		inputs.zen-browser.packages.${pkgs.system}.default

@@ -38,9 +38,13 @@
     MOZ_ENABLE_WAYLAND = "0";
     MOZ_USE_XINPUT = "1";
   };
-
-  environment.etc."mozilla/native-messaging-hosts/org.kde.plasma.browser_integration.json".source =
-  "${pkgs.kdePackages.plasma-browser-integration}/lib/mozilla/native-messaging-hosts/org.kde.plasma.browser_integration.json";
+  programs.firefox.preferences = {
+  "widget.use-xdg-desktop-portal.file-picker" = 1;
+};
+programs.firefox.nativeMessagingHosts.packages = [
+  pkgs.kdePackages.plasma-browser-integration
+];
+ 
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.hilmi = {
@@ -60,6 +64,7 @@
     peazip 
     fastfetch
     kdePackages.plasma-browser-integration
+    nixfmt
    ];
 
     programs.steam.enable = true;
