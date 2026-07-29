@@ -36,6 +36,7 @@ in
 		pkgs.obsidian
 		pkgs.mpv
 		pkgs.libreoffice-qt
+		pkgs.vscode
 	];
 
 	# Konfigurasi Spicetify

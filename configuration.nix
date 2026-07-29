@@ -29,8 +29,9 @@
     konsole
     elisa
     ark
-    kwrite
     okular
+    kate
+    ktexteditor
   ];
 
   environment.sessionVariables = {
