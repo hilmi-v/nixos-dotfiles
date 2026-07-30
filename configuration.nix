@@ -61,9 +61,12 @@
     fastfetch
     nixfmt
     fish
+    sbctl
   ];
 
   programs.steam.enable = true;
+  programs.fish.enable = true;
+
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [
     "nix-command"
