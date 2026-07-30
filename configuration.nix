@@ -60,6 +60,7 @@
     peazip
     fastfetch
     nixfmt
+    fish
   ];
 
   programs.steam.enable = true;
