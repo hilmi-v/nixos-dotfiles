@@ -74,7 +74,13 @@ in
   defaultApplications = {
     "text/plain" = [ "code.desktop" ];
     "text/markdown" = [ "code.desktop" ];
-    "application/x-zerosize" = [ "code.desktop" ]; # For empty files
+    "application/x-zerosize" = [ "code.desktop" ];
+    
+    "text/html" = "zen.desktop";
+      "x-scheme-handler/http" = "zen.desktop";
+      "x-scheme-handler/https" = "zen.desktop";
+      "x-scheme-handler/about" = "zen.desktop";
+      "x-scheme-handler/unknown" = "zen.desktop"; # For empty files
   };
  };
 
