@@ -5,7 +5,7 @@
   ...
 }:
 let
-  justlisten = pkgs.callPackage ./modules/just-listen.nix { };
+  mysddmtheme = pkgs.callPackage ./modules/my-sddm.nix { };
 in
 {
   imports = [
@@ -31,9 +31,9 @@ in
 
   services.displayManager.sddm = {
     enable = true;
-    theme = "just-listen";
+    theme = "my-sddm";
     extraPackages = with pkgs.kdePackages; [
-      justlisten
+      mysddmtheme
       qtmultimedia
       qt5compat
       qtsvg
@@ -75,7 +75,7 @@ in
     fish
     sbctl
     ffmpeg
-    justlisten
+    mysddmtheme
   ];
 
   programs.steam.enable = true;
@@ -97,7 +97,16 @@ in
     algorithm = "zstd";
     memoryPercent = 50;
   };
-
+  system.autoUpgrade = {
+    enable = true;
+    dates = "weekly";
+    flake = "/home/hilmi/nixos-dotfiles";
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "--commit-lock-files"
+    ];
+  };
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
