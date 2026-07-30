@@ -74,6 +74,7 @@ in
     sbctl
     ffmpeg
     mysddmtheme
+    kdePackages.krohnkite
   ];
   fonts.packages = with pkgs; [
     cinzel
