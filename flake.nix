@@ -15,6 +15,10 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # lanzaboote = {
+    #   url = "github:nix-community/lanzaboote/v1.1.0";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs =
@@ -23,6 +27,7 @@
       nixpkgs,
       home-manager,
       spicetify-nix,
+      # lanzaboote,
       ...
     }@inputs:
     {
@@ -41,6 +46,17 @@
               extraSpecialArgs = { inherit inputs; };
             };
           }
+
+
+          # secure boot
+          # lanzaboote.nixosModules.lanzaboote
+          # ({ pkgs, lib, ... }: {
+          #   boot.loader.systemd-boot.enable = lib.mkForce false;
+          #   boot.lanzaboote = {
+          #     enable = true;
+          #     pkiBundle = "/var/lib/sbctl";
+          #   };
+          #  })
         ];
       };
     };

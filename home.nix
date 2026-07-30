@@ -2,11 +2,11 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 
 let
-  # Mengambil library package dari spicetify-nix untuk tema dan ekstensi
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
 in
 {
@@ -14,7 +14,6 @@ in
   home.homeDirectory = "/home/hilmi";
   home.stateVersion = "26.05";
 
-  # Impor modul spicetify untuk Home Manager
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
     ./deploy.nix
@@ -69,4 +68,7 @@ in
       powerBar
     ];
   };
+
+ 
+
 }
