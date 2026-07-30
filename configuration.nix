@@ -75,7 +75,9 @@ in
     ffmpeg
     mysddmtheme
   ];
-
+  fonts.packages = with pkgs; [
+    cinzel
+  ];
   programs.steam.enable = true;
   programs.fish.enable = true;
 

@@ -69,6 +69,18 @@ in
     ];
   };
 
- 
+ xdg.mimeApps = {
+  enable = true;
+  defaultApplications = {
+    "text/plain" = [ "code.desktop" ];
+    "text/markdown" = [ "code.desktop" ];
+    "application/x-zerosize" = [ "code.desktop" ]; # For empty files
+  };
+ };
+
+ home.sessionVariables = {
+  EDITOR = "code --wait";
+  VISUAL = "code --wait";
+ };
 
 }
