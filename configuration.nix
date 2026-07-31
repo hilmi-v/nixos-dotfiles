@@ -75,6 +75,7 @@ in
     sbctl
     ffmpeg
     mysddmtheme
+    mlocate 
   ];
   fonts.packages = with pkgs; [
     cinzel
