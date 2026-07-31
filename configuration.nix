@@ -65,7 +65,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     wget
     git
     kitty
@@ -75,7 +75,9 @@ in
     sbctl
     ffmpeg
     mysddmtheme
-    mlocate 
+    mlocate
+    fcitx5
+    mozc
   ];
   fonts.packages = with pkgs; [
     cinzel
@@ -109,6 +111,16 @@ in
       "--commit-lock-files"
     ];
   };
+
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-gtk
+    ];
+  };
+
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }

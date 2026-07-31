@@ -49,7 +49,6 @@ in
     pkgs.libreoffice-qt
     pkgs.vscode
     pkgs.darkly
-
   ];
 
   # Konfigurasi Spicetify
@@ -88,5 +87,4 @@ in
   EDITOR = "code --wait";
   VISUAL = "code --wait";
  };
-
 }
