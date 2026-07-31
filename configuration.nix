@@ -76,8 +76,6 @@ in
     ffmpeg
     mysddmtheme
     mlocate
-    fcitx5
-    mozc
   ];
   fonts.packages = with pkgs; [
     cinzel
@@ -116,9 +114,10 @@ in
     enable = true;
     type = "fcitx5";
     fcitx5.addons = with pkgs; [
-      fcitx5-mozc
+      fcitx5-mozc-ut
       fcitx5-gtk
     ];
+    fcitx5.waylandFrontend = true;
   };
 
   system.stateVersion = "26.05"; # Did you read the comment?
