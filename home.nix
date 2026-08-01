@@ -62,11 +62,9 @@ in
           --add-flags "--disable-gpu"
       '';
     });
-    # Tema dan skema warna (Contoh: Catppuccin Mocha)
     theme = spicePkgs.themes.sleek;
-    colorScheme = "BladeRunner";
+    colorScheme = "Psycho";
 
-    # Ekstensi yang ingin diaktifkan
     enabledExtensions = with spicePkgs.extensions; [
       adblockify
       copyLyrics
