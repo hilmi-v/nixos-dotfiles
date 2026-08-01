@@ -63,7 +63,7 @@ in
       '';
     });
     theme = spicePkgs.themes.sleek;
-    colorScheme = "Psycho";
+    colorScheme = "Coral";
 
     enabledExtensions = with spicePkgs.extensions; [
       adblockify
