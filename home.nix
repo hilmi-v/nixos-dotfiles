@@ -49,7 +49,6 @@ in
     pkgs.libreoffice-qt
     pkgs.vscode
     pkgs.darkly
-    pkgs.klassy
     pkgs.kdePackages.krohnkite
   ];
 
@@ -57,7 +56,7 @@ in
   programs.spicetify = {
     enable = true;
 
-spotifyPackage = pkgs.spotify.overrideAttrs (oldAttrs: {
+    spotifyPackage = pkgs.spotify.overrideAttrs (oldAttrs: {
       postInstall = (oldAttrs.postInstall or "") + ''
         wrapProgram $out/bin/spotify \
           --add-flags "--disable-gpu"
@@ -75,23 +74,36 @@ spotifyPackage = pkgs.spotify.overrideAttrs (oldAttrs: {
     ];
   };
 
- xdg.mimeApps = {
-  enable = true;
-  defaultApplications = {
-    "text/plain" = [ "code.desktop" ];
-    "text/markdown" = [ "code.desktop" ];
-    "application/x-zerosize" = [ "code.desktop" ];
-    
-    "text/html" = "zen.desktop";
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/plain" = [ "code.desktop" ];
+      "text/markdown" = [ "code.desktop" ];
+      "application/x-zerosize" = [ "code.desktop" ];
+
+      "text/html" = "zen.desktop";
       "x-scheme-handler/http" = "zen.desktop";
       "x-scheme-handler/https" = "zen.desktop";
       "x-scheme-handler/about" = "zen.desktop";
       "x-scheme-handler/unknown" = "zen.desktop"; # For empty files
+    };
   };
- };
 
- home.sessionVariables = {
-  EDITOR = "code --wait";
-  VISUAL = "code --wait";
- };
+  home.sessionVariables = {
+    EDITOR = "code --wait";
+    VISUAL = "code --wait";
+  };
+
+  xdg.desktopEntries.spotify-kitty = {
+    name = "Spotify (kitty)";
+    genericName = "Music Player";
+    exec = "kitty --class spotify-kitty -e spotify --disable-gpu";
+    icon = "spotify";
+    categories = [
+      "Audio"
+      "Music"
+      "Player"
+      "AudioVideo"
+    ];
+  };
 }
