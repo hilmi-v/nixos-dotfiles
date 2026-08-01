@@ -94,16 +94,5 @@ in
     VISUAL = "code --wait";
   };
 
-  xdg.desktopEntries.spotify-kitty = {
-    name = "Spotify (kitty)";
-    genericName = "Music Player";
-    exec = "kitty --class spotify-kitty -e spotify --disable-gpu";
-    icon = "spotify";
-    categories = [
-      "Audio"
-      "Music"
-      "Player"
-      "AudioVideo"
-    ];
-  };
+
 }
