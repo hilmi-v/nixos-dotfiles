@@ -49,12 +49,20 @@ in
     pkgs.libreoffice-qt
     pkgs.vscode
     pkgs.darkly
+    pkgs.klassy
+    pkgs.kdePackages.krohnkite
   ];
 
   # Konfigurasi Spicetify
   programs.spicetify = {
     enable = true;
 
+spotifyPackage = pkgs.spotify.overrideAttrs (oldAttrs: {
+      postInstall = (oldAttrs.postInstall or "") + ''
+        wrapProgram $out/bin/spotify \
+          --add-flags "--disable-gpu"
+      '';
+    });
     # Tema dan skema warna (Contoh: Catppuccin Mocha)
     theme = spicePkgs.themes.sleek;
     colorScheme = "BladeRunner";
@@ -62,7 +70,6 @@ in
     # Ekstensi yang ingin diaktifkan
     enabledExtensions = with spicePkgs.extensions; [
       adblockify
-      coverAmbience
       copyLyrics
       powerBar
     ];
