@@ -56,12 +56,6 @@ in
   programs.spicetify = {
     enable = true;
 
-    spotifyPackage = pkgs.spotify.overrideAttrs (oldAttrs: {
-      postInstall = (oldAttrs.postInstall or "") + ''
-        wrapProgram $out/bin/spotify \
-          --add-flags "--disable-gpu"
-      '';
-    });
     theme = spicePkgs.themes.sleek;
     colorScheme = "BladeRunner";
 
