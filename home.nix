@@ -63,28 +63,7 @@ in
       '';
     });
     theme = spicePkgs.themes.sleek;
-    customColorScheme = {
-      text = "c3c7d1";
-      subtext = "d7d7d7";
-      nav-active-text = "222E32";
-      main = "222E32";
-      sidebar = "222E32";
-      player = "222E32";
-      card = "222E32";
-      shadow = "0e0e13";
-      main-secondary = "09111b";
-      button = "bb3634";
-      button-secondary = "bb3634";
-      button-active = "E03F3C";
-      button-disabled = "192531";
-      nav-active = "E03F3C";
-      play-button = "bb3634";
-      tab-active = "09111b";
-      notification = "192531";
-      notification-error = "192531";
-      playback-bar = "bb3634";
-      misc = "FFFFFF";
-    };
+    colorScheme = "BladeRunner";
 
     enabledExtensions = with spicePkgs.extensions; [
       adblockify
