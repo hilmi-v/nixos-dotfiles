@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 let
@@ -84,10 +85,23 @@ in
   programs.fish.enable = true;
 
   nixpkgs.config.allowUnfree = true;
+   nixpkgs = {
+    config.allowUnfreePredicate =
+      pkg:
+      builtins.elem (lib.getName pkg) [
+        "spotify"
+        "spotify-spotx"
+      ];
+    overlays = [ inputs.spotx-nix.overlays.default ];
+  };
+  
+  
+  
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
+  
   nix.settings.auto-optimise-store = true;
   nix.gc = {
     automatic = true;
