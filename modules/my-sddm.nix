@@ -3,7 +3,7 @@
 stdenvNoCC.mkDerivation {
   pname = "sddm-theme";
   version = "1.0.0";
-  src = ../my-sddm;
+  src = ../assets/my-sddm;
   dontUnpack = true;
 
   installPhase = ''

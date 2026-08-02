@@ -7,14 +7,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
-      # url = "github:youwen5/zen-browser-flake";
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # spicetify-nix = {
-    #   url = "github:Gerg-L/spicetify-nix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     # lanzaboote = {
     #   url = "github:nix-community/lanzaboote/v1.1.0";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -30,7 +25,6 @@
       self,
       nixpkgs,
       home-manager,
-      # spicetify-nix,
       # lanzaboote,
       spotx-nix,
       ...
