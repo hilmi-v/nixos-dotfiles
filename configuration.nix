@@ -14,6 +14,7 @@
     ./modules/system/nix.nix
     ./modules/system/desktop.nix
     ./modules/system/packages.nix
+    ./modules/system/packages.nix
   ];
 
   users.users.hilmi = {

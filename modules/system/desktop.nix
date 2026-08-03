@@ -16,6 +16,7 @@ in
     autoRepeatDelay = 200;
     autoRepeatInterval = 35;
   };
+
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.libinput.enable = true;

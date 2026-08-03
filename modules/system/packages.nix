@@ -5,19 +5,6 @@
   ...
 }:
 {
-    environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    konsole
-    elisa
-    okular
-    kate
-    ktexteditor
-  ];
-
-  # firefox to work
-  environment.sessionVariables = {
-    MOZ_ENABLE_WAYLAND = "0";
-    MOZ_USE_XINPUT = "1";
-  };  
 
   environment.systemPackages = with pkgs; [
     vim
@@ -31,9 +18,28 @@
     ffmpeg
     mlocate
   ];
+
+  # exclude optional kde app
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    konsole
+    elisa
+    okular
+    kate
+    ktexteditor
+  ];
+
+  # firefox to work
+  environment.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = "0";
+    MOZ_USE_XINPUT = "1";
+  };  
+
+  # font
   fonts.packages = with pkgs; [
     cinzel
   ];
+
+
   programs.steam.enable = true;
   programs.fish.enable = true;
   programs.kdeconnect.enable = true;
@@ -50,6 +56,7 @@
   };
   
 
+# keyboard
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";

@@ -24,5 +24,4 @@
       "--commit-lock-files"
     ];
   };
-  hardware.graphics.enable = true;
 }
