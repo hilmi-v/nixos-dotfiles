@@ -37,6 +37,7 @@
   # font
   fonts.packages = with pkgs; [
     cinzel
+    noto-fonts
   ];
 
 
