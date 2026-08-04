@@ -12,12 +12,11 @@
 
   };
 
- programs.bash = {
-    enable = true;
-    initExtra = ''
-      spotify --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-gpu-rasterization
-    '';
-  };
+ home.packages = [
+    (pkgs.writeShellScriptBin "spotify-run" ''
+      spotify --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-gpu-rasterization "$@"
+    '')
+  ];
 
   home.file.".zen/native-messaging-hosts/org.kde.plasma.browser_integration.json".source =
     "${pkgs.kdePackages.plasma-browser-integration}/lib/mozilla/native-messaging-hosts/org.kde.plasma.browser_integration.json";
