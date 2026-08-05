@@ -17,6 +17,7 @@
     sbctl
     ffmpeg
     mlocate
+    ryzenadj
   ];
 
   # exclude optional kde app
