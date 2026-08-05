@@ -10,6 +10,7 @@
   hardware.graphics.enable32Bit = true; 
   hardware.graphics.enable = true;
   hardware.sane.enable = true;
+  hardware.cpu.amd.ryzen-smu.enable = true;
 
   services.printing.enable = true;
   services.power-profiles-daemon.enable = true;
