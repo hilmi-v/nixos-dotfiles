@@ -19,6 +19,7 @@
     pkgs.kdePackages.krohnkite
     pkgs.spotify-spotx
     pkgs.qbittorrent
+    pkgs.lutris
   ];
 }
  

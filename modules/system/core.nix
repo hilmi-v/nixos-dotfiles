@@ -7,6 +7,7 @@
   networking.networkmanager.enable = true;
 
   hardware.bluetooth.enable = true;
+  hardware.graphics.enable32Bit = true; 
   hardware.graphics.enable = true;
   hardware.sane.enable = true;
 
