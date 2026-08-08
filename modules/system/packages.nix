@@ -18,6 +18,7 @@
     ffmpeg
     mlocate
     ryzenadj
+    unrar
   ];
 
   # exclude optional kde app
