@@ -10,10 +10,10 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # lanzaboote = {
-    #   url = "github:nix-community/lanzaboote/v1.1.0";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.1.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     spotx-nix = {
       url = "github:SpotX-Official/SpotX-Nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +25,7 @@
       self,
       nixpkgs,
       home-manager,
-      # lanzaboote,
+      lanzaboote,
       spotx-nix,
       ...
     }@inputs:
@@ -47,14 +47,14 @@
           }
 
           # secure boot
-          # lanzaboote.nixosModules.lanzaboote
-          # ({ pkgs, lib, ... }: {
-          #   boot.loader.systemd-boot.enable = lib.mkForce false;
-          #   boot.lanzaboote = {
-          #     enable = true;
-          #     pkiBundle = "/var/lib/sbctl";
-          #   };
-          #  })
+          lanzaboote.nixosModules.lanzaboote
+          ({ pkgs, lib, ... }: {
+            boot.loader.systemd-boot.enable = lib.mkForce false;
+            boot.lanzaboote = {
+              enable = true;
+              pkiBundle = "/var/lib/sbctl";
+            };
+           })
         ];
       };
     };
