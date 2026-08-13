@@ -46,6 +46,10 @@
   programs.steam.enable = true;
   programs.fish.enable = true;
   programs.kdeconnect.enable = true;
+  programs.appimage = {
+  enable = true;
+  binfmt = true;
+};
 
   nixpkgs.config.allowUnfree = true;
    nixpkgs = {
