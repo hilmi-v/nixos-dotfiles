@@ -19,6 +19,8 @@
     mlocate
     ryzenadj
     unrar
+    scrcpy
+     android-tools
   ];
 
   # exclude optional kde app
