@@ -42,8 +42,8 @@
       logo = {
         type = "kitty";
         source = "/home/hilmi/nixos-dotfiles/assets/f.jpg";
-        width = 36;
-        height = 36;
+        width = 70;
+        height = 30;
       };
       modules = [
         "title"
