@@ -40,7 +40,7 @@
   enable = true;
   settings = {
     logo = {
-      type = "image"; # Use "file" if you are passing a custom text/ASCII art file
+      type = "kitty"; 
       source = "../../assets/f.jpg";
       width = 36;
       height = 36;
