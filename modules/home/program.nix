@@ -1,8 +1,8 @@
-  {
-    pkgs,
-    ...
-  }:
-  {
+{
+  pkgs,
+  ...
+}:
+{
   programs.git = {
     enable = true;
     settings.user = {
@@ -12,7 +12,7 @@
 
   };
 
- home.packages = [
+  home.packages = [
     (pkgs.writeShellScriptBin "spotify-run" ''
       spotify --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-gpu-rasterization "$@"
     '')
@@ -36,21 +36,11 @@
     };
   };
 
-   programs.fastfetch = {
-  enable = true;
-  settings = {
-    logo = {
-      type = "kitty"; 
-      source = "../../assets/f.jpg";
-      width = 36;
-      height = 36;
-    };
-  };
-  };
+
 
   home.sessionVariables = {
     EDITOR = "code --wait";
     VISUAL = "code --wait";
   };
 
-  }
+}
