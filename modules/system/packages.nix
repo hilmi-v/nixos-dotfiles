@@ -11,7 +11,6 @@
     wget
     git
     kitty
-    fastfetch
     nixfmt
     fish
     sbctl

@@ -36,36 +36,4 @@
     size = 2.0;
   };
 
-    programs.fastfetch = {
-    enable = true;
-    settings = {
-      logo = {
-        type = "kitty";
-        source = "/home/hilmi/nixos-dotfiles/assets/f.jpg";
-        # width = 70;
-        # height = 30;
-      };
-      modules = [
-        "title"
-        "separator"
-        "os"
-        "host"
-        "kernel"
-        "uptime"
-        "packages"
-        "shell"
-        "display"
-        "de"
-        "wm"
-        "terminal"
-        "cpu"
-        "gpu"
-        "memory"
-        "swap"
-        "disk"
-        "colors"
-      ];
-    };
-  };
-
 }
