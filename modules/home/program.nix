@@ -36,6 +36,18 @@
     };
   };
 
+   programs.fastfetch = {
+  enable = true;
+  settings = {
+    logo = {
+      type = "image"; # Use "file" if you are passing a custom text/ASCII art file
+      source = "../../assets/f.jpg";
+      width = 36;
+      height = 36;
+    };
+  };
+  };
+
   home.sessionVariables = {
     EDITOR = "code --wait";
     VISUAL = "code --wait";
