@@ -18,6 +18,10 @@
       url = "github:SpotX-Official/SpotX-Nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    areofyl-fetch = {
+      url = "github:areofyl/fetch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
