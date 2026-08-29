@@ -19,11 +19,6 @@
     pkgs.kdePackages.krohnkite
     pkgs.spotify-spotx
     pkgs.qbittorrent
-    (pkgs.lutris.override {
-      extraPkgs = pkgs: [
-        pkgs.glib-networking
-        pkgs.dconf
-      ];
-    })
+    pkgs.lutris
   ];
 }
