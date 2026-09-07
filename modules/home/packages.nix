@@ -18,6 +18,7 @@
     pkgs.darkly
     pkgs.kdePackages.krohnkite
     pkgs.spotify-spotx
+    inputs.manatan.packages.${pkgs.system}.default
     pkgs.qbittorrent
     pkgs.lutris
   ];

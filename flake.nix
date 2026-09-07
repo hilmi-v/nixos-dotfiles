@@ -22,6 +22,10 @@
       url = "github:areofyl/fetch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    manatan = {
+      url = "github:GKHWB/Manatan-Flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -31,6 +35,7 @@
       home-manager,
       # lanzaboote,
       spotx-nix,
+      manatan,
       ...
     }@inputs:
     {
