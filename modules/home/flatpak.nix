@@ -9,7 +9,7 @@
     # Add your declarative Flatpak apps here
     packages = [
       "org.freedownloadmanager.Manager"
-      "https://kolbyml.github.io/Manatan/io.github.kolbyml.Manatan.flatpakref"
+      "io.github.kolbyml.Manatan.flatpakref"
     ];
 
     # Optional: Automatically update flatpaks on activation or via timers
