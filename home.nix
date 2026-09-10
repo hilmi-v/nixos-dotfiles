@@ -13,8 +13,9 @@
 
   imports = [
     ./modules/deploy.nix
-    ./modules/home/packages.nix
+    ./modules/home/desktop.nix
     ./modules/home/program.nix
     ./modules/home/fetch.nix
+    ./modules/home/flatpak.nix
   ];
 }

@@ -22,8 +22,8 @@
       url = "github:areofyl/fetch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    manatan = {
-      url = "github:GKHWB/Manatan-Flake";
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak/?ref=latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -35,7 +35,7 @@
       home-manager,
       # lanzaboote,
       spotx-nix,
-      manatan,
+      nix-flatpak,
       ...
     }@inputs:
     {
@@ -49,9 +49,14 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.hilmi = import ./home.nix;
               backupFileExtension = "backup";
               extraSpecialArgs = { inherit inputs; };
+              users.hilmi = {
+                imports =[
+                  ./home.nix
+                  nix-flatpak.homeManagerModules.nix-flatpak
+                ];
+              };
             };
           }
 

@@ -9,7 +9,6 @@
       nativeMessagingHosts = [ pkgs.kdePackages.plasma-browser-integration ];
     })
     pkgs.anki
-    pkgs.persepolis
     pkgs.steam
     pkgs.obsidian
     pkgs.mpv
@@ -18,8 +17,6 @@
     pkgs.darkly
     pkgs.kdePackages.krohnkite
     pkgs.spotify-spotx
-    inputs.manatan.packages.${pkgs.system}.default
-    pkgs.qbittorrent
     pkgs.lutris
   ];
 }
