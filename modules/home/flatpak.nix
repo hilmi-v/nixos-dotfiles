@@ -4,7 +4,6 @@
   # If you imported nix-flatpak.homeManagerModules.nix-flatpak in your flake.nix, 
   # you can directly use services.flatpak here:
   services.flatpak = {
-    enable = true;
 
     # Add your declarative Flatpak apps here
     packages = [
