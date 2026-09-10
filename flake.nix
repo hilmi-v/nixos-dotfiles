@@ -22,9 +22,9 @@
       url = "github:areofyl/fetch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-flatpak = {
-      url = "github:gmodena/nix-flatpak/?ref=latest";
-    };
+    # nix-flatpak = {
+    #   url = "github:gmodena/nix-flatpak/?ref=latest";
+    # };
   };
 
   outputs =
@@ -34,7 +34,7 @@
       home-manager,
       # lanzaboote,
       spotx-nix,
-      nix-flatpak,
+      # nix-flatpak,
       ...
     }@inputs:
     {
@@ -53,7 +53,7 @@
               users.hilmi = {
                 imports =[
                   ./home.nix
-                  nix-flatpak.homeManagerModules.nix-flatpak
+                  # nix-flatpak.homeManagerModules.nix-flatpak
                 ];
               };
             };
