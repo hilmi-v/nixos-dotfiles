@@ -22,7 +22,7 @@
     flags = [
       "--update-input"
       "nixpkgs"
-      "--commit-lock-files"
+      "--commit-lock-file"
     ];
   };
 }
