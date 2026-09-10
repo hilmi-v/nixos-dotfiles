@@ -5,19 +5,11 @@
   # you can directly use services.flatpak here:
   services.flatpak = {
 
-    remotes = [
-      {
-        name = "manatan-repo";
-        location = "https://kolbyml.github.io/Manatan/";
-      }
-    ];
+    
     # Add your declarative Flatpak apps here
     packages = [
       "org.freedownloadmanager.Manager"
-      {
-        appId = "io.github.kolbyml.Manatan";
-        origin = "manatan-repo";
-      }
+      "https://kolbyml.github.io/Manatan/io.github.kolbyml.Manatan.flatpakref"
     ];
 
     # Optional: Automatically update flatpaks on activation or via timers
