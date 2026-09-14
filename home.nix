@@ -16,6 +16,5 @@
     ./modules/home/desktop.nix
     ./modules/home/program.nix
     ./modules/home/fetch.nix
-    ./modules/home/flatpak.nix
   ];
 }
