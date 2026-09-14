@@ -62,6 +62,7 @@ programs.nix-ld = {
     cups
     cairo
     pango
+    expat
   ];
 };
   users.users.hilmi = {
