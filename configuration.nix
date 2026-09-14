@@ -40,22 +40,24 @@ programs.nix-ld = {
     libdrm
 
     # X11
-    xorg.libX11
-    xorg.libXcomposite
-    xorg.libXdamage
-    xorg.libXext
-    xorg.libXfixes
-    xorg.libXrandr
-    xorg.libXrender
-    xorg.libXcursor
-    xorg.libXi
-    xorg.libXtst
-    xorg.libxcb
-    xorg.libxshmfence
+    libX11
+    libXcomposite
+    libXdamage
+    libXext
+    libXfixes
+    libXrandr
+    libXrender
+    libXcursor
+    libXi
+    libXtst
+    libxcb
+    libxshmfence
 
     # Graphics
     libGL
     vulkan-loader
+
+    dbus
   ];
 };
   users.users.hilmi = {
