@@ -63,6 +63,7 @@ programs.nix-ld = {
     cairo
     pango
     expat
+    libxkbcommon
   ];
 };
   users.users.hilmi = {
