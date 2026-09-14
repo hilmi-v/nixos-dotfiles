@@ -67,6 +67,8 @@ programs.nix-ld = {
     alsa-lib
   ];
 };
+
+networking.firewall.enable = false;
   users.users.hilmi = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
