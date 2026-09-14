@@ -61,6 +61,7 @@ programs.nix-ld = {
     atk
     cups
     cairo
+    pango
   ];
 };
   users.users.hilmi = {
