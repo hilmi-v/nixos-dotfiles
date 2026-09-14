@@ -58,6 +58,7 @@ programs.nix-ld = {
     vulkan-loader
 
     dbus
+    atk
   ];
 };
   users.users.hilmi = {
