@@ -64,6 +64,7 @@ programs.nix-ld = {
     pango
     expat
     libxkbcommon
+    alsa-lib
   ];
 };
   users.users.hilmi = {
