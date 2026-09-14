@@ -20,7 +20,42 @@ programs.nix-ld = {
   enable = true;
 
   libraries = with pkgs; [
+    # Basic runtime libraries
+    zlib
+    zstd
+    stdenv.cc.cc
+    curl
+    openssl
+    libssh
+    bzip2
+    libxml2
+    xz
+
+    # Browser / Electron / React Native DevTools
+    nspr
+    nss
+    gtk3
     glib
+    libgbm
+    libdrm
+
+    # X11
+    xorg.libX11
+    xorg.libXcomposite
+    xorg.libXdamage
+    xorg.libXext
+    xorg.libXfixes
+    xorg.libXrandr
+    xorg.libXrender
+    xorg.libXcursor
+    xorg.libXi
+    xorg.libXtst
+    xorg.libxcb
+    xorg.libxshmfence
+
+    # Graphics
+    libGL
+    vulkan-loader
   ];
 };
   users.users.hilmi = {
