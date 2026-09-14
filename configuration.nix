@@ -69,6 +69,13 @@ programs.nix-ld = {
 };
 
 networking.firewall.enable = false;
+
+xdg.portal = {
+  enable = true;
+  xdgOpenUsePortal = true;
+  extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
+};
+
   users.users.hilmi = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
