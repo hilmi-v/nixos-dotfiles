@@ -47,6 +47,7 @@
   programs.steam.enable = true;
   programs.fish.enable = true;
   programs.kdeconnect.enable = true;
+  programs.firefox.enable = true;
   programs.appimage = {
   enable = true;
   binfmt = true;
