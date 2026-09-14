@@ -60,6 +60,7 @@ programs.nix-ld = {
     dbus
     atk
     cups
+    cairo
   ];
 };
   users.users.hilmi = {
