@@ -16,7 +16,13 @@
     ./modules/system/packages.nix
     ./modules/system/packages.nix
   ];
-programs.nix-ld.enable = true;
+programs.nix-ld = {
+  enable = true;
+
+  libraries = with pkgs; [
+    glib
+  ];
+};
   users.users.hilmi = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
