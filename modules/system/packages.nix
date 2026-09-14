@@ -19,7 +19,8 @@
     ryzenadj
     unrar
     scrcpy
-     android-tools
+    android-tools
+    code-cursor-fhs
   ];
 
   # exclude optional kde app
