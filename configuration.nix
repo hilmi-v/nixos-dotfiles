@@ -59,6 +59,7 @@ programs.nix-ld = {
 
     dbus
     atk
+    cups
   ];
 };
   users.users.hilmi = {
