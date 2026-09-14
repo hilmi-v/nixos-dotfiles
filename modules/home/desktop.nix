@@ -14,7 +14,7 @@
     pkgs.mpv
     pkgs.libreoffice-qt
     pkgs.vscode
-    pkgs.code-cursor
+    pkgs.code-cursor-fhs
     pkgs.darkly
     pkgs.kdePackages.krohnkite
     pkgs.spotify-spotx
