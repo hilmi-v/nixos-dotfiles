@@ -25,6 +25,7 @@
     # nix-flatpak = {
     #   url = "github:gmodena/nix-flatpak/?ref=latest";
     # };
+    claude-code.url = "github:sadjow/claude-code-nix";
   };
 
   outputs =
@@ -35,6 +36,7 @@
       # lanzaboote,
       spotx-nix,
       # nix-flatpak,
+      claude-code,
       ...
     }@inputs:
     {
@@ -57,6 +59,7 @@
                 ];
               };
             };
+            nixpkgs.overlays = [ claude-code.overlays.default ];
           }
 
           # secure boot
