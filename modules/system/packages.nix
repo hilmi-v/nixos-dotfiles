@@ -12,6 +12,8 @@
     git
     kitty
     nixfmt
+    claude-code
+    nodejs
     fish
     sbctl
     ffmpeg
