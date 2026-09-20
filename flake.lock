@@ -81,6 +81,24 @@
         "type": "github"
       }
     },
+    "local-cashier": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1789894818,
+        "narHash": "sha256-gagteOqLe7LmqB2w1MI0n65vFKkQ5BDs/5vjfi9OXe0=",
+        "ref": "refs/heads/main",
+        "rev": "d4082cb18fa6453960be865114e11ed518cd9232",
+        "revCount": 41,
+        "type": "git",
+        "url": "file:///home/hilmi/projects/local_cashier"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/hilmi/projects/local_cashier"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1789370336,
@@ -99,6 +117,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1789684949,
+        "narHash": "sha256-ZKhUe/2IJUq1JhKxKMu8rbkgSGmPP2ZCqlIPn40aGCM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e554fab72f81915600f3f449b786fd9af40439a5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1785104993,
         "narHash": "sha256-V1MsJr1brsjtyfzGtnQ4id/qw6NjeYRqTY5vlf9s7CU=",
         "rev": "8623c4c20aa4ca2f5fb81510d2944066c3fb0d96",
@@ -116,7 +150,8 @@
         "areofyl-fetch": "areofyl-fetch",
         "claude-code": "claude-code",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_2",
+        "local-cashier": "local-cashier",
+        "nixpkgs": "nixpkgs_3",
         "spotx-nix": "spotx-nix",
         "zen-browser": "zen-browser"
       }

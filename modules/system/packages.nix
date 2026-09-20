@@ -22,7 +22,7 @@
     unrar
     scrcpy
     android-tools
-    code-cursor-fhs
+    # code-cursor-fhs
   ];
 
   # exclude optional kde app

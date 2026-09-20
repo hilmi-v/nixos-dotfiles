@@ -68,7 +68,6 @@ programs.nix-ld = {
   ];
 };
 
-networking.firewall.enable = false;
 
 xdg.portal = {
   enable = true;
@@ -76,6 +75,18 @@ xdg.portal = {
   extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
 };
 
+  services.tailscale = {
+    enable = true;
+    openFirewall = true;   # opens Tailscale's own UDP port so direct connections work
+  };
+
+  networking.firewall = {
+    enable = true;
+
+    # Option A (simplest): trust everything that comes in over Tailscale.
+    # Covers the app (3210) AND the Vite dev server (5173).
+    trustedInterfaces = [ "tailscale0" ];
+  };
   users.users.hilmi = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.

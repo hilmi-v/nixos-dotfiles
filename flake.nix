@@ -26,6 +26,7 @@
     #   url = "github:gmodena/nix-flatpak/?ref=latest";
     # };
     claude-code.url = "github:sadjow/claude-code-nix";
+    local-cashier.url = "git+file:///home/hilmi/projects/local_cashier";
   };
 
   outputs =
@@ -37,6 +38,7 @@
       spotx-nix,
       # nix-flatpak,
       claude-code,
+      local-cashier,
       ...
     }@inputs:
     {
@@ -61,6 +63,16 @@
             };
             nixpkgs.overlays = [ claude-code.overlays.default ];
           }
+           local-cashier.nixosModules.default
+        {
+          services.local-cashier = {
+            enable = true;
+            appDir = "/home/hilmi/local_cashier";   # the checkout, already built
+            user = "hilmi";
+            # dataDir defaults to /var/lib/local-cashier
+            # port defaults to 3210
+          };
+        }
 
           # secure boot
           # lanzaboote.nixosModules.lanzaboote
