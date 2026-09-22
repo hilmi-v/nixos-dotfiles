@@ -18,5 +18,6 @@
     pkgs.kdePackages.krohnkite
     pkgs.spotify-spotx
     pkgs.lutris
+    pkgs.persepolis
   ];
 }
